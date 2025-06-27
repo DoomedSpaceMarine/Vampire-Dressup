@@ -7,6 +7,8 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
     public AccessoryTypes targetType;
     public AccessoryTags targetTag;
 
+    public AccessoryTags currentTag;
+
     public DragItem currentlyDraggedItem;
 
     public GameObject currentGameobject;
@@ -26,6 +28,7 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
             slotIsFull = true;
             slotGameObject = currentGameobject;
             slotGameObject.GetComponent<Image>().raycastTarget = true;
+            currentTag = currentlyDraggedItem.accessory.accessoryTag;
             currentGameobject = null;
             currentlyDraggedItem = null;
         }
