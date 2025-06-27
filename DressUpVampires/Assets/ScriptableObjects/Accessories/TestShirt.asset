@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84383f92acea085459fac8eb625bc84a, type: 3}
-  m_Name: TestHat
+  m_Name: TestShirt
   m_EditorClassIdentifier: 
-  accessoryName: TestHat
-  accessorySprite: {fileID: 6857084133497776822, guid: 5ce88ef81f82aa541a87063a69deff95, type: 3}
-  accessoryIcon: {fileID: 6857084133497776822, guid: 5ce88ef81f82aa541a87063a69deff95, type: 3}
+  accessoryName: 
+  accessorySprite: {fileID: 0}
+  accessoryIcon: {fileID: 0}
   accessoryType: 0
-  accessoryTag: 1
+  accessoryTag: 0

@@ -3,6 +3,7 @@ using UnityEngine;
     public enum AccessoryTags
     {
         None,
-        Ball,
-        Halloween
+        Invitation1,
+        Invitation2,
+        Invitation3
     }

@@ -44,6 +44,7 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
         {
             slotGameObject.SetActive(true);
             slotIsFull = false;
+            currentTag = AccessoryTags.None;    
         }
     }
 
