@@ -60,4 +60,15 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
         
     }
 
+    public void EmptySlot()
+    {
+        if (slotIsFull)
+        {
+            slotGameObject.SetActive(true);
+            slotGameObject.transform.position = slotGameObject.GetComponent<DragItem>().itemOriginalPosition;
+            slotIsFull = false;
+            currentTag = AccessoryTags.None;
+        }
+    }
+
 }
