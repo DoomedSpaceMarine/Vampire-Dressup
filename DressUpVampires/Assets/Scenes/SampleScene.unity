@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 727393014}
   - component: {fileID: 727393016}
   - component: {fileID: 727393015}
+  - component: {fileID: 727393017}
   m_Layer: 5
   m_Name: ShoeSlot
   m_TagString: Untagged
@@ -490,6 +491,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 727393013}
   m_CullTransparentMesh: 1
+--- !u!114 &727393017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 727393013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b68620e24bd79a41ab7bd119a9f1216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetType: 3
+  targetTag: 0
+  currentlyDraggedItem: {fileID: 0}
+  currentGameobject: {fileID: 0}
+  slotIsFull: 0
+  slotGameObject: {fileID: 0}
 --- !u!1 &933898131
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,6 +520,7 @@ GameObject:
   - component: {fileID: 933898132}
   - component: {fileID: 933898134}
   - component: {fileID: 933898133}
+  - component: {fileID: 933898135}
   m_Layer: 5
   m_Name: HeadgearSlot
   m_TagString: Untagged
@@ -565,6 +585,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 933898131}
   m_CullTransparentMesh: 1
+--- !u!114 &933898135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 933898131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b68620e24bd79a41ab7bd119a9f1216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetType: 0
+  targetTag: 0
+  currentlyDraggedItem: {fileID: 0}
+  currentGameobject: {fileID: 0}
+  slotIsFull: 0
+  slotGameObject: {fileID: 0}
 --- !u!1 &988114885
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +653,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17645a37ff771145891579b790dcb03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemImage: {fileID: 988114888}
   accessory: {fileID: 11400000, guid: 54d647c7925898248874046114357e1b, type: 2}
 --- !u!114 &988114888
 MonoBehaviour:
@@ -819,6 +858,7 @@ GameObject:
   - component: {fileID: 1865388248}
   - component: {fileID: 1865388250}
   - component: {fileID: 1865388249}
+  - component: {fileID: 1865388251}
   m_Layer: 5
   m_Name: ShirtSlot
   m_TagString: Untagged
@@ -883,6 +923,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1865388247}
   m_CullTransparentMesh: 1
+--- !u!114 &1865388251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865388247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b68620e24bd79a41ab7bd119a9f1216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetType: 1
+  targetTag: 0
+  currentlyDraggedItem: {fileID: 0}
+  currentGameobject: {fileID: 0}
+  slotIsFull: 0
+  slotGameObject: {fileID: 0}
 --- !u!1 &2124764033
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,6 +952,7 @@ GameObject:
   - component: {fileID: 2124764034}
   - component: {fileID: 2124764036}
   - component: {fileID: 2124764035}
+  - component: {fileID: 2124764037}
   m_Layer: 5
   m_Name: PantsSlot
   m_TagString: Untagged
@@ -958,6 +1017,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2124764033}
   m_CullTransparentMesh: 1
+--- !u!114 &2124764037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124764033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b68620e24bd79a41ab7bd119a9f1216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetType: 2
+  targetTag: 0
+  currentlyDraggedItem: {fileID: 0}
+  currentGameobject: {fileID: 0}
+  slotIsFull: 0
+  slotGameObject: {fileID: 0}
 --- !u!1 &2144686032
 GameObject:
   m_ObjectHideFlags: 0
