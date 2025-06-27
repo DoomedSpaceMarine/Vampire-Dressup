@@ -1,7 +1,8 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
-public class AccessorySlot : MonoBehaviour, IDropHandler
+public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public AccessoryTypes targetType;
     public AccessoryTags targetTag;
@@ -24,10 +25,35 @@ public class AccessorySlot : MonoBehaviour, IDropHandler
             currentGameobject.SetActive(false);
             slotIsFull = true;
             slotGameObject = currentGameobject;
+            slotGameObject.GetComponent<Image>().raycastTarget = true;
+            currentGameobject = null;
+            currentlyDraggedItem = null;
         }
         else
         {
             Debug.Log("Not Good");
         }
     }
+
+    public void OnBeginDrag(PointerEventData data)
+    {
+        if (slotIsFull)
+        {
+            slotGameObject.SetActive(true);
+            slotIsFull = false;
+        }
+    }
+
+    public void OnDrag(PointerEventData data)
+    {
+        slotGameObject.transform.position = Input.mousePosition;
+    }
+
+    public void OnEndDrag(PointerEventData data)
+    {
+        slotGameObject.transform.position = slotGameObject.GetComponent<DragItem>().itemOriginalPosition;
+        slotGameObject = null;
+        
+    }
+
 }

@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    private Vector2 itemOriginalPosition;
+    public Vector2 itemOriginalPosition;
 
     [SerializeField] private Image itemImage;
 
