@@ -94,6 +94,8 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log("You lose");
+            masqueradeCounter = 0;
+            ResetTagsAndSlots();
         }
     }
 }
