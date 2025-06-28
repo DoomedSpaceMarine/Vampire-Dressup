@@ -1344,6 +1344,7 @@ GameObject:
   - component: {fileID: 604641243}
   - component: {fileID: 604641242}
   - component: {fileID: 604641241}
+  - component: {fileID: 604641244}
   m_Layer: 5
   m_Name: HeadImage
   m_TagString: Untagged
@@ -1424,6 +1425,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 604641239}
   m_CullTransparentMesh: 1
+--- !u!114 &604641244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 604641239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b68620e24bd79a41ab7bd119a9f1216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetType: 0
+  targetTag: 0
+  currentTag: 0
+  currentlyDraggedItem: {fileID: 0}
+  currentGameobject: {fileID: 0}
+  slotIsFull: 0
+  slotGameObject: {fileID: 0}
+  inventory: {fileID: 268271499}
+  headImage: {fileID: 604641242}
+  torsoImage: {fileID: 1395116446}
+  legsImage: {fileID: 1099436441}
+  feetImage: {fileID: 951614950}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2146,6 +2171,7 @@ GameObject:
   - component: {fileID: 951614951}
   - component: {fileID: 951614950}
   - component: {fileID: 951614949}
+  - component: {fileID: 951614952}
   m_Layer: 5
   m_Name: FeetImage
   m_TagString: Untagged
@@ -2226,6 +2252,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 951614947}
   m_CullTransparentMesh: 1
+--- !u!114 &951614952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951614947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b68620e24bd79a41ab7bd119a9f1216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetType: 3
+  targetTag: 0
+  currentTag: 0
+  currentlyDraggedItem: {fileID: 0}
+  currentGameobject: {fileID: 0}
+  slotIsFull: 0
+  slotGameObject: {fileID: 0}
+  inventory: {fileID: 268271499}
+  headImage: {fileID: 604641242}
+  torsoImage: {fileID: 1395116446}
+  legsImage: {fileID: 1099436441}
+  feetImage: {fileID: 951614950}
 --- !u!1 &988114885
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,6 +2670,7 @@ GameObject:
   - component: {fileID: 1099436442}
   - component: {fileID: 1099436441}
   - component: {fileID: 1099436440}
+  - component: {fileID: 1099436443}
   m_Layer: 5
   m_Name: LegsImage
   m_TagString: Untagged
@@ -2700,6 +2751,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1099436438}
   m_CullTransparentMesh: 1
+--- !u!114 &1099436443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099436438}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b68620e24bd79a41ab7bd119a9f1216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetType: 2
+  targetTag: 0
+  currentTag: 0
+  currentlyDraggedItem: {fileID: 0}
+  currentGameobject: {fileID: 0}
+  slotIsFull: 0
+  slotGameObject: {fileID: 0}
+  inventory: {fileID: 268271499}
+  headImage: {fileID: 604641242}
+  torsoImage: {fileID: 1395116446}
+  legsImage: {fileID: 1099436441}
+  feetImage: {fileID: 951614950}
 --- !u!1 &1167390489
 GameObject:
   m_ObjectHideFlags: 0
@@ -2715,7 +2790,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1167390490
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3398,6 +3473,7 @@ GameObject:
   - component: {fileID: 1395116447}
   - component: {fileID: 1395116446}
   - component: {fileID: 1395116445}
+  - component: {fileID: 1395116448}
   m_Layer: 5
   m_Name: TorsoImage
   m_TagString: Untagged
@@ -3478,6 +3554,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1395116443}
   m_CullTransparentMesh: 1
+--- !u!114 &1395116448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1395116443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b68620e24bd79a41ab7bd119a9f1216, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetType: 1
+  targetTag: 0
+  currentTag: 0
+  currentlyDraggedItem: {fileID: 0}
+  currentGameobject: {fileID: 0}
+  slotIsFull: 0
+  slotGameObject: {fileID: 0}
+  inventory: {fileID: 268271499}
+  headImage: {fileID: 604641242}
+  torsoImage: {fileID: 1395116446}
+  legsImage: {fileID: 1099436441}
+  feetImage: {fileID: 951614950}
 --- !u!1 &1522198768
 GameObject:
   m_ObjectHideFlags: 0
@@ -3659,10 +3759,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   accessorySlots:
-  - {fileID: 933898135}
-  - {fileID: 1865388251}
-  - {fileID: 2124764037}
-  - {fileID: 727393017}
+  - {fileID: 604641244}
+  - {fileID: 1395116448}
+  - {fileID: 1099436443}
+  - {fileID: 951614952}
   readyButton: {fileID: 941851815}
   victoryObject: {fileID: 1044471303}
   victoryText: {fileID: 1888489535}
