@@ -1,6 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -13,18 +14,28 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Button readyButton;
 
-   private GameObject tempGameObject;
-   private DragItem tempStorage;
+    private GameObject tempGameObject;
+    private DragItem tempStorage;
+
+    //Victory Screen
+    [SerializeField] private GameObject victoryObject;
+    [SerializeField] private TextMeshProUGUI victoryText;
+    [SerializeField] private Button continueButton;
+    [SerializeField] private TextMeshProUGUI buttonText;
 
     private void Awake()
     {
        readyButton.onClick.AddListener(() 
            => RoundVictoryCheck());
+        
+        continueButton.onClick.AddListener(()
+            => CloseVictoryScreen());
     }
 
     private void Start()
     {
         ResetTagsAndSlots();
+        CloseVictoryScreen();
     }
 
     public void ResetTagsAndSlots()
@@ -91,6 +102,19 @@ public class GameManager : MonoBehaviour
         if (victoryPoint >= difficultyScale)
         {
             Debug.Log("You win");
+            if(masqueradeCounter <= 3)
+            {
+                victoryObject.SetActive(true);
+                victoryText.text = "You win this round. Vampire dies";
+                buttonText.text = "Continue";
+            }
+            else
+            {
+                victoryObject.SetActive(true);
+                victoryText.text = "All Vampires die and you win the game!";
+                buttonText.text = "Restart";
+                masqueradeCounter = 0;
+            }
             ResetTagsAndSlots();
 
         }
@@ -100,5 +124,10 @@ public class GameManager : MonoBehaviour
             masqueradeCounter = 0;
             ResetTagsAndSlots();
         }
+    }
+
+    private void CloseVictoryScreen()
+    {
+        victoryObject.SetActive(false);
     }
 }
