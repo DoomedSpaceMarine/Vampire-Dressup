@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
                     accessorySlots[i].EmptySlot();
                 }
                 masqueradeCounter++;
+                difficultyScale = 2;
                 break;
 
             case 1:
@@ -49,6 +50,7 @@ public class GameManager : MonoBehaviour
                     accessorySlots[i].EmptySlot();
                 }
                 masqueradeCounter++;
+                difficultyScale = 3;
                 break;
 
             case 2:
@@ -59,6 +61,7 @@ public class GameManager : MonoBehaviour
                     accessorySlots[i].EmptySlot();
                 }
                 masqueradeCounter++;
+                difficultyScale = 4;
                 break;
 
         }
