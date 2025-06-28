@@ -16,6 +16,8 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
     public bool slotIsFull;
     public GameObject slotGameObject;
 
+    private bool itemIsDraggable;
+
     [SerializeField] private Inventory inventory;
 
     //Accessory Sprite 
@@ -55,21 +57,29 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
             slotGameObject.SetActive(true);
             SetSpriteEmpty(slotGameObject.GetComponent<DragItem>().accessory.accessoryType);
             slotIsFull = false;
-            currentTag = AccessoryTags.None;    
+            currentTag = AccessoryTags.None;
+            itemIsDraggable = true;
         }
     }
 
     public void OnDrag(PointerEventData data)
     {
-        slotGameObject.transform.position = Input.mousePosition;
+        if (itemIsDraggable)
+        {
+            slotGameObject.transform.position = Input.mousePosition;
+        }
     }
 
     public void OnEndDrag(PointerEventData data)
     {
-        slotGameObject.transform.position = slotGameObject.GetComponent<DragItem>().itemOriginalPosition;
-        slotGameObject.GetComponent<DragItem>().isInventory = true;
-        CheckInventoryStatus();
-        slotGameObject = null;
+        if (itemIsDraggable)
+        {
+            slotGameObject.transform.position = slotGameObject.GetComponent<DragItem>().itemOriginalPosition;
+            slotGameObject.GetComponent<DragItem>().isInventory = true;
+            itemIsDraggable = false;
+            CheckInventoryStatus();
+            slotGameObject = null;
+        }
         
     }
 
