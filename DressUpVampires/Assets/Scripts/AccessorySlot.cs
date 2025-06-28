@@ -18,6 +18,12 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
 
     [SerializeField] private Inventory inventory;
 
+    //Accessory Sprite 
+    [SerializeField] private Image headImage;
+    [SerializeField] private Image torsoImage;
+    [SerializeField] private Image legsImage;
+    [SerializeField] private Image feetImage;
+
     public void OnDrop(PointerEventData data)
     {
         currentGameobject = data.pointerDrag;
@@ -30,6 +36,7 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
             slotIsFull = true;
             slotGameObject = currentGameobject;
             slotGameObject.GetComponent<Image>().raycastTarget = true;
+            SetSprite();
             currentTag = currentlyDraggedItem.accessory.accessoryTag;
             currentlyDraggedItem.isInventory = false;
             currentGameobject = null;
@@ -108,6 +115,31 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
                 slotGameObject.SetActive(false);
             }
         }
+    }
+
+    private void SetSprite()
+    {
+        switch(currentlyDraggedItem.accessory.accessoryType)
+        {
+            case AccessoryTypes.Head:
+                headImage.sprite = currentlyDraggedItem.accessory.accessorySprite; 
+                break;
+            case AccessoryTypes.Torso:
+                torsoImage.sprite = currentlyDraggedItem.accessory.accessorySprite;
+                break;
+            case AccessoryTypes.Legs:
+                legsImage.sprite = currentlyDraggedItem.accessory.accessorySprite;
+                break;
+            case AccessoryTypes.Feet:
+                feetImage.sprite = currentlyDraggedItem.accessory.accessorySprite;
+                break;
+
+        }
+    }
+
+    private void SetSpriteEmpty()
+    {
+
     }
 
 }
