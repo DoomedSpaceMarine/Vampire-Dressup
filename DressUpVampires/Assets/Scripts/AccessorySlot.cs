@@ -53,6 +53,7 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
         if (slotIsFull)
         {
             slotGameObject.SetActive(true);
+            SetSpriteEmpty(slotGameObject.GetComponent<DragItem>().accessory.accessoryType);
             slotIsFull = false;
             currentTag = AccessoryTags.None;    
         }
@@ -79,6 +80,10 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
             slotGameObject.SetActive(true);
             slotGameObject.transform.position = slotGameObject.GetComponent<DragItem>().itemOriginalPosition;
             slotGameObject.GetComponent<DragItem>().isInventory = true;
+            SetSpriteEmpty(AccessoryTypes.Head);
+            SetSpriteEmpty(AccessoryTypes.Torso);
+            SetSpriteEmpty(AccessoryTypes.Legs);
+            SetSpriteEmpty(AccessoryTypes.Feet);
             inventory.ShowHeadAccessories();
             slotIsFull = false;
             currentTag = AccessoryTags.None;
@@ -137,9 +142,27 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
         }
     }
 
-    private void SetSpriteEmpty()
+    private void SetSpriteEmpty(AccessoryTypes type)
     {
+        switch (type)
+        {
+            case AccessoryTypes.Head:
+                headImage.sprite = null;
+                break;
 
+            case AccessoryTypes.Torso:
+                torsoImage.sprite = null;
+                break;
+
+            case AccessoryTypes.Legs:
+                legsImage.sprite = null;
+                break;
+
+            case AccessoryTypes.Feet:
+                feetImage.sprite = null;
+                break;
+
+        }
     }
 
 }
