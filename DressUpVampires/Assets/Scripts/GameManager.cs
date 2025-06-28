@@ -14,9 +14,6 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private Button readyButton;
 
-    private GameObject tempGameObject;
-    private DragItem tempStorage;
-
     //Victory Screen
     [SerializeField] private GameObject victoryObject;
     [SerializeField] private TextMeshProUGUI victoryText;

@@ -10,8 +10,11 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public Accessory accessory;
 
+    public bool isInventory = true;
+
     private void Start()
     {
+        isInventory = true;
         itemOriginalPosition = transform.position;
     }
 
