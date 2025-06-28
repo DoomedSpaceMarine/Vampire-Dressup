@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84383f92acea085459fac8eb625bc84a, type: 3}
+  m_Name: TestShoes
+  m_EditorClassIdentifier: 
+  accessoryName: TestShoes
+  accessorySprite: {fileID: 6857084133497776822, guid: 5ce88ef81f82aa541a87063a69deff95, type: 3}
+  accessoryIcon: {fileID: 6857084133497776822, guid: 5ce88ef81f82aa541a87063a69deff95, type: 3}
+  accessoryType: 3
+  accessoryTag: 1
