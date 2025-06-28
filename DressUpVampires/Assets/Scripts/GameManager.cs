@@ -116,7 +116,7 @@ public class GameManager : MonoBehaviour
         if (victoryPoint >= difficultyScale)
         {
             Debug.Log("You win");
-            if(masqueradeCounter <= 3)
+            if(masqueradeCounter < 3)
             {
                 victoryObject.SetActive(true);
                 victoryText.text = "You win this round. Vampire dies";
