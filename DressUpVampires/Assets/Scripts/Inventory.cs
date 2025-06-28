@@ -17,6 +17,8 @@ public class Inventory : MonoBehaviour
     [SerializeField] private Button legsButton;
     [SerializeField] private Button feetButton;
 
+    [SerializeField] private AudioSource drawerOpenSfx;
+
     private void Awake()
     {
         headButton.onClick.AddListener(()
@@ -99,6 +101,11 @@ public class Inventory : MonoBehaviour
             torso[i].gameObject.SetActive(false);
             legs[i].gameObject.SetActive(false);
         }
+    }
+
+    public void PlaySoundEffect()
+    {
+        drawerOpenSfx.Play();   
     }
 
 
