@@ -5,7 +5,7 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    private int difficultyScale = 2;
+    private int difficultyScale = 1;
     private int victoryPoint;
 
     private int masqueradeCounter;
@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
     //Lose Screen
     [SerializeField] private GameObject loseObject;
     [SerializeField] private Button restartButton;
+
+    //Excellence system
+    [SerializeField] private TextMeshProUGUI hintText; //Under Victory Screen gameobject
 
     private void Awake()
     {
@@ -55,7 +58,7 @@ public class GameManager : MonoBehaviour
                     accessorySlots[i].EmptySlot();
                 }
                 masqueradeCounter++;
-                difficultyScale = 2;
+                difficultyScale = 1;
                 break;
 
             case 1:
@@ -66,7 +69,7 @@ public class GameManager : MonoBehaviour
                     accessorySlots[i].EmptySlot();
                 }
                 masqueradeCounter++;
-                difficultyScale = 3;
+                difficultyScale = 2;
                 break;
 
             case 2:
@@ -77,7 +80,7 @@ public class GameManager : MonoBehaviour
                     accessorySlots[i].EmptySlot();
                 }
                 masqueradeCounter++;
-                difficultyScale = 4;
+                difficultyScale = 3;
                 break;
 
         }
@@ -112,6 +115,21 @@ public class GameManager : MonoBehaviour
                 victoryObject.SetActive(true);
                 victoryText.text = "You win this round. Vampire dies";
                 buttonText.text = "Continue";
+
+                if (difficultyScale == 1 && victoryPoint >= 2)
+                {
+                    hintText.gameObject.SetActive(true);
+                    hintText.text = "Hint 1";
+                }
+                else if (difficultyScale == 2 && victoryPoint >= 3)
+                {
+                    hintText.gameObject.SetActive(true);
+                    hintText.text = "Hint 2";
+                }
+                else
+                {
+                    hintText.gameObject.SetActive(false);
+                }
             }
             else
             {
