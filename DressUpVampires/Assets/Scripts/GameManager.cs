@@ -23,6 +23,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Button continueButton;
     [SerializeField] private TextMeshProUGUI buttonText;
 
+    //Lose Screen
+    [SerializeField] private GameObject loseObject;
+    [SerializeField] private Button restartButton;
+
     private void Awake()
     {
        readyButton.onClick.AddListener(() 
@@ -30,12 +34,16 @@ public class GameManager : MonoBehaviour
         
         continueButton.onClick.AddListener(()
             => CloseVictoryScreen());
+
+        restartButton.onClick.AddListener(()
+            => CloseLoseScreen());
     }
 
     private void Start()
     {
         ResetTagsAndSlots();
         CloseVictoryScreen();
+        CloseLoseScreen();
     }
 
     public void ResetTagsAndSlots()
@@ -121,6 +129,7 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log("You lose");
+            loseObject.SetActive(true);
             masqueradeCounter = 0;
             ResetTagsAndSlots();
         }
@@ -129,5 +138,10 @@ public class GameManager : MonoBehaviour
     private void CloseVictoryScreen()
     {
         victoryObject.SetActive(false);
+    }
+
+    private void CloseLoseScreen()
+    {
+        loseObject.SetActive(false);
     }
 }
