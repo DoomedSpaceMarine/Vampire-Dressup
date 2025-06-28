@@ -27,6 +27,9 @@ public class GameManager : MonoBehaviour
     //Excellence system
     [SerializeField] private TextMeshProUGUI hintText; //Under Victory Screen gameobject
 
+    //Invitation text object
+    [SerializeField] private TextMeshProUGUI invitationText;
+
     private void Awake()
     {
        readyButton.onClick.AddListener(() 
@@ -57,6 +60,7 @@ public class GameManager : MonoBehaviour
                     accessorySlots[i].currentTag = AccessoryTags.None;
                     accessorySlots[i].EmptySlot();
                 }
+                invitationText.text = "Invitation 1 hint text";
                 masqueradeCounter++;
                 difficultyScale = 1;
                 break;
@@ -68,6 +72,7 @@ public class GameManager : MonoBehaviour
                     accessorySlots[i].currentTag = AccessoryTags.None;
                     accessorySlots[i].EmptySlot();
                 }
+                invitationText.text = "Invitation 2 hint text";
                 masqueradeCounter++;
                 difficultyScale = 2;
                 break;
@@ -79,6 +84,7 @@ public class GameManager : MonoBehaviour
                     accessorySlots[i].currentTag = AccessoryTags.None;
                     accessorySlots[i].EmptySlot();
                 }
+                invitationText.text = "Invitation 3 hint text";
                 masqueradeCounter++;
                 difficultyScale = 3;
                 break;
