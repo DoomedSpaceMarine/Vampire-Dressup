@@ -2,6 +2,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Sprite nextClueScreen;
     [SerializeField] private Sprite nothingGainedScreen;
     [SerializeField] private Sprite revengeSprite;
+    [SerializeField] private Button mainMenuVictoryButton;
 
     //Lose Screen
     [SerializeField] private GameObject loseObject;
@@ -31,6 +33,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Image loseImage;
     [SerializeField] private Sprite normalDeath;
     [SerializeField] private Sprite finalDeath;
+    [SerializeField] private Button mainMenuLoseButton;
 
     //Excellence system
     [SerializeField] private TextMeshProUGUI hintText; //Under Victory Screen gameobject
@@ -57,6 +60,12 @@ public class GameManager : MonoBehaviour
 
         restartButton.onClick.AddListener(()
             => CloseLoseScreen());
+
+        mainMenuVictoryButton.onClick.AddListener(()
+            => MainMenuButton());
+
+        mainMenuLoseButton.onClick.AddListener(()
+            => MainMenuButton());
     }
 
     private void Start()
@@ -162,6 +171,7 @@ public class GameManager : MonoBehaviour
                     storeHint1 = "\r\nA tired look";
                     hint1 = true;
                     victoryImage.sprite = nextClueScreen;
+                    mainMenuVictoryButton.gameObject.SetActive(false);
                 }
                 else if (difficultyScale == 2 && victoryPoint >= 3)
                 {
@@ -169,16 +179,19 @@ public class GameManager : MonoBehaviour
                     storeHint2 = "\r\nBare skin\r\nwell worn beads/pearls/buttons";
                     hint2 = true;
                     victoryImage.sprite = nextClueScreen;
+                    mainMenuVictoryButton.gameObject.SetActive(false);
                 }
                 else
                 {
                     hintText.gameObject.SetActive(false);
                     victoryImage.sprite = nothingGainedScreen;
+                    mainMenuVictoryButton.gameObject.SetActive(false);
                 }
             }
             else
             {
                 victoryObject.SetActive(true);
+                mainMenuVictoryButton.gameObject.SetActive(true);
                 victoryText.text = "All Vampires die and you win the game!";
                 hintText.gameObject.SetActive(false);
                 isThisEnd = true;
@@ -229,5 +242,10 @@ public class GameManager : MonoBehaviour
             openingScreen.SetActive(true);
             isThisEnd= false;
         }    
+    }
+
+    private void MainMenuButton()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }
