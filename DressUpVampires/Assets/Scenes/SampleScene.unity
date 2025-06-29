@@ -792,7 +792,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &188188022
 RectTransform:
   m_ObjectHideFlags: 0
@@ -834,7 +834,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5569977257535576499, guid: 2f915a2501a6bba46bb5cb1d339f5428, type: 3}
+  m_Sprite: {fileID: 3981471589832735460, guid: 7c0f66572311af448a20b3d70028d628, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6775,8 +6775,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000015259, y: -382}
-  m_SizeDelta: {x: 333.529, y: 114.214}
+  m_AnchoredPosition: {x: 0.000015259, y: -475}
+  m_SizeDelta: {x: 333.529, y: 71.647}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1605412931
 MonoBehaviour:
@@ -7021,7 +7021,7 @@ MonoBehaviour:
   victoryImage: {fileID: 1044471305}
   youWinScreen: {fileID: 0}
   nextClueScreen: {fileID: -5089315229963175443, guid: c0380e738a428f147b258443e8f4d073, type: 3}
-  nothingGainedScreen: {fileID: 4470718069138701225, guid: f675b712c017d1648883da572d523ff0, type: 3}
+  nothingGainedScreen: {fileID: -1141838155142766067, guid: fc96eab2cd3a1c942bd26607ced305d9, type: 3}
   revengeSprite: {fileID: -416158461281945266, guid: a2a4a5f8eb805be49af9dcba9db46184, type: 3}
   loseObject: {fileID: 1704159065}
   restartButton: {fileID: 233794950}
