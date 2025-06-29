@@ -159,19 +159,19 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
         switch (type)
         {
             case AccessoryTypes.Head:
-                headImage.sprite = null;
+                headImage.sprite = emptySprite;
                 break;
 
             case AccessoryTypes.Torso:
-                torsoImage.sprite = null;
+                torsoImage.sprite = emptySprite;
                 break;
 
             case AccessoryTypes.Legs:
-                legsImage.sprite = null;
+                legsImage.sprite = emptySprite;
                 break;
 
             case AccessoryTypes.Feet:
-                feetImage.sprite = null;
+                feetImage.sprite = emptySprite;
                 break;
 
         }

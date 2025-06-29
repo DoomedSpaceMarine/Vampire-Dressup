@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84383f92acea085459fac8eb625bc84a, type: 3}
+  m_Name: SexShirt
+  m_EditorClassIdentifier: 
+  accessoryName: SexShirt
+  accessorySprite: {fileID: 21300000, guid: d949f0d2c4223a547a5bca682266b247, type: 3}
+  accessoryIcon: {fileID: 21300000, guid: 6bce5591af56ea44ea01bf3fd397c158, type: 3}
+  accessoryType: 1
+  accessoryTag: 3

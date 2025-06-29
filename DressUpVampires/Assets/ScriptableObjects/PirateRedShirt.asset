@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84383f92acea085459fac8eb625bc84a, type: 3}
+  m_Name: PirateRedShirt
+  m_EditorClassIdentifier: 
+  accessoryName: PirateRedShirt
+  accessorySprite: {fileID: 21300000, guid: 0dd7b587f1bdfe947b02b5d034e5f371, type: 3}
+  accessoryIcon: {fileID: 21300000, guid: ca66442eaa862774f806f5b4c98494a5, type: 3}
+  accessoryType: 1
+  accessoryTag: 1
