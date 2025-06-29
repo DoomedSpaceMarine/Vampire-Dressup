@@ -158,15 +158,15 @@ public class GameManager : MonoBehaviour
 
                 if (difficultyScale == 1 && victoryPoint >= 2)
                 {
-                    hintText.gameObject.SetActive(true);
-                    storeHint1 = hintText.text = "\r\n A tired look";
+                    //hintText.gameObject.SetActive(true);
+                    storeHint1 = "\r\nA tired look";
                     hint1 = true;
                     victoryImage.sprite = nextClueScreen;
                 }
                 else if (difficultyScale == 2 && victoryPoint >= 3)
                 {
-                    hintText.gameObject.SetActive(true);
-                    storeHint2 = hintText.text = "\r\n Bare skin\r\nwell worn beads/pearls/buttons";
+                    //hintText.gameObject.SetActive(true);
+                    storeHint2 = "\r\nBare skin\r\nwell worn beads/pearls/buttons";
                     hint2 = true;
                     victoryImage.sprite = nextClueScreen;
                 }
