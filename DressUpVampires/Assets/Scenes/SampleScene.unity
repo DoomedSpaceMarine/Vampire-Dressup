@@ -5164,7 +5164,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19999999, g: 0.19999999, b: 0.19999999, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -5656,7 +5656,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: -284}
+  m_AnchoredPosition: {x: -0.000015259, y: -392}
   m_SizeDelta: {x: 372.084, y: 101.622}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1367113912
@@ -7018,8 +7018,11 @@ MonoBehaviour:
   victoryText: {fileID: 1888489535}
   continueButton: {fileID: 1367113912}
   buttonText: {fileID: 1268652537}
+  victoryImage: {fileID: 1044471305}
   youWinScreen: {fileID: 0}
-  nextInvitationScreen: {fileID: 0}
+  nextClueScreen: {fileID: -5089315229963175443, guid: c0380e738a428f147b258443e8f4d073, type: 3}
+  nothingGainedScreen: {fileID: 4470718069138701225, guid: f675b712c017d1648883da572d523ff0, type: 3}
+  revengeSprite: {fileID: -416158461281945266, guid: a2a4a5f8eb805be49af9dcba9db46184, type: 3}
   loseObject: {fileID: 1704159065}
   restartButton: {fileID: 233794950}
   hintText: {fileID: 510649083}
@@ -7588,7 +7591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1888489535
 MonoBehaviour:
   m_ObjectHideFlags: 0

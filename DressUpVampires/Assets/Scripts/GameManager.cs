@@ -19,8 +19,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI victoryText;
     [SerializeField] private Button continueButton;
     [SerializeField] private TextMeshProUGUI buttonText;
+    [SerializeField] private Image victoryImage;
     [SerializeField] private Sprite youWinScreen;
-    [SerializeField] private Sprite nextInvitationScreen;
+    [SerializeField] private Sprite nextClueScreen;
+    [SerializeField] private Sprite nothingGainedScreen;
+    [SerializeField] private Sprite revengeSprite;
 
     //Lose Screen
     [SerializeField] private GameObject loseObject;
@@ -155,16 +158,19 @@ public class GameManager : MonoBehaviour
                     hintText.gameObject.SetActive(true);
                     storeHint1 = hintText.text = "\r\n A tired look";
                     hint1 = true;
+                    victoryImage.sprite = nextClueScreen;
                 }
                 else if (difficultyScale == 2 && victoryPoint >= 3)
                 {
                     hintText.gameObject.SetActive(true);
                     storeHint2 = hintText.text = "\r\n Bare skin\r\nwell worn beads/pearls/buttons";
                     hint2 = true;
+                    victoryImage.sprite = nextClueScreen;
                 }
                 else
                 {
                     hintText.gameObject.SetActive(false);
+                    victoryImage.sprite = nothingGainedScreen;
                 }
             }
             else
@@ -175,6 +181,7 @@ public class GameManager : MonoBehaviour
                 isThisEnd = true;
                 buttonText.text = "Restart";
                 masqueradeCounter = 0;
+                victoryImage.sprite = revengeSprite;
             }
             ResetTagsAndSlots();
 
