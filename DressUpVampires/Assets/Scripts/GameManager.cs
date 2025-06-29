@@ -86,7 +86,7 @@ public class GameManager : MonoBehaviour
                     accessorySlots[i].currentTag = AccessoryTags.None;
                     accessorySlots[i].EmptySlot();
                 }
-                invitationText.text = "We kindly invite you to the Seven Seas Masquarade of Lady Selene Zvuk. We ask you to the dress to the occasion.\r\nNote:\r\nWe welcome hair thats light like sea foam,\r\nclothes that remind us of fearless swashbucklers\r\nwe especially adore puffy sleaves";
+                invitationText.text = "We kindly invite you to the Seven Seas Masquarade of Lady Selene Zvuk. We ask you to dress to the occasion.\r\nNote:\r\nWe welcome hair thats light like sea foam,\r\nclothes that remind us of fearless swashbucklers\r\nwe especially adore puffy sleaves";
                 masqueradeCounter++;
                 hint1 = false;
                 hint2 = false;
