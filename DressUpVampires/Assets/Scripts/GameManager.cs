@@ -28,6 +28,9 @@ public class GameManager : MonoBehaviour
     //Lose Screen
     [SerializeField] private GameObject loseObject;
     [SerializeField] private Button restartButton;
+    [SerializeField] private Image loseImage;
+    [SerializeField] private Sprite normalDeath;
+    [SerializeField] private Sprite finalDeath;
 
     //Excellence system
     [SerializeField] private TextMeshProUGUI hintText; //Under Victory Screen gameobject
@@ -189,6 +192,14 @@ public class GameManager : MonoBehaviour
         else
         {
             Debug.Log("You lose");
+            if(masqueradeCounter < 3)
+            {
+                loseImage.sprite = normalDeath;
+            }
+            else
+            {
+                loseImage.sprite = finalDeath;
+            }
             loseObject.SetActive(true);
             masqueradeCounter = 0;
             ResetTagsAndSlots();
