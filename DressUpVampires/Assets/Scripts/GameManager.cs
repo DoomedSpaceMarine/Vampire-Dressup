@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI victoryText;
     [SerializeField] private Button continueButton;
     [SerializeField] private TextMeshProUGUI buttonText;
+    [SerializeField] private Sprite youWinScreen;
+    [SerializeField] private Sprite nextInvitationScreen;
 
     //Lose Screen
     [SerializeField] private GameObject loseObject;

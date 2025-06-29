@@ -26,12 +26,14 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
     [SerializeField] private Image legsImage;
     [SerializeField] private Image feetImage;
 
+    [SerializeField] private Sprite emptySprite;
+
     public void OnDrop(PointerEventData data)
     {
         currentGameobject = data.pointerDrag;
         currentlyDraggedItem = currentGameobject.GetComponent<DragItem>();
 
-        if (currentGameobject.GetComponent<DragItem>().accessory.accessoryType == targetType)
+        if (!slotIsFull && currentGameobject.GetComponent<DragItem>().accessory.accessoryType == targetType)
         {
             Debug.Log("Good");
             currentGameobject.SetActive(false);
