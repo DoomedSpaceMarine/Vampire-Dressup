@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PrinceHair
   m_EditorClassIdentifier: 
   accessoryName: PrinceHair
-  accessorySprite: {fileID: 21300000, guid: de924ade43cfbb944964fa9ad8b78fd9, type: 3}
+  accessorySprite: {fileID: 21300000, guid: 94a82e97ea02bf346b54f6139adb93d1, type: 3}
   accessoryIcon: {fileID: 21300000, guid: 1edb2e0600718d144a3c063e802bdc26, type: 3}
   accessoryType: 0
   accessoryTag: 2

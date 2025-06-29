@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PrincessShoes
   m_EditorClassIdentifier: 
   accessoryName: PrincessShoes
-  accessorySprite: {fileID: 21300000, guid: e7393193c5f4bdb4d9e033016d5f0a8f, type: 3}
+  accessorySprite: {fileID: 21300000, guid: 5fd4ee35270f8d24d86c8dbc3499e3de, type: 3}
   accessoryIcon: {fileID: 21300000, guid: dec5a2ddfd62356428b327e6a248aa2e, type: 3}
   accessoryType: 3
   accessoryTag: 2

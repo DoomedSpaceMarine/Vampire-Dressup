@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: PrincessSkirt
   m_EditorClassIdentifier: 
   accessoryName: PrincessSkirt
-  accessorySprite: {fileID: 21300000, guid: 4f1f7d3fa77089a42b1d0e7673b6bbad, type: 3}
+  accessorySprite: {fileID: 21300000, guid: 7fd1aaebdcfbeb14eb14c47a788566e1, type: 3}
   accessoryIcon: {fileID: 21300000, guid: 05dd244d3d462554d92e1f3943f7d991, type: 3}
   accessoryType: 2
   accessoryTag: 2
