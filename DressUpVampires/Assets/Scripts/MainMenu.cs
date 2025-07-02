@@ -8,6 +8,10 @@ public class MainMenu : MonoBehaviour
     [SerializeField] private Button creditsButton;
     [SerializeField] private Button exitButton;
 
+    //Credits
+    [SerializeField] private GameObject creditsCanvas;
+    [SerializeField] private Button returnButton;
+
     private void Awake()
     {
         startButton.onClick.AddListener(()
@@ -17,7 +21,12 @@ public class MainMenu : MonoBehaviour
             => CreditsButton());
 
         exitButton.onClick.AddListener(()
-            => ExitButton());   
+            => ExitButton());
+
+        returnButton.onClick.AddListener(()
+            => CloseCredits());
+
+        CloseCredits();
     }
 
     private void StartButton()
@@ -27,11 +36,16 @@ public class MainMenu : MonoBehaviour
 
     private void CreditsButton()
     {
-
+        creditsCanvas.SetActive(true);
     }
 
     private void ExitButton()
     {
         Application.Quit();
+    }
+
+    private void CloseCredits()
+    {
+        creditsCanvas.SetActive(false);
     }
 }
