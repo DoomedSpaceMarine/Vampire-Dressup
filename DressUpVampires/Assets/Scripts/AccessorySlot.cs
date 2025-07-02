@@ -46,6 +46,30 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
             currentGameobject = null;
             currentlyDraggedItem = null;
         }
+        else if (slotIsFull && currentGameobject.GetComponent<DragItem>().accessory.accessoryType == targetType)
+        {
+            //Empty Slot
+            slotGameObject.SetActive(true);
+            SetSpriteEmpty(slotGameObject.GetComponent<DragItem>().accessory.accessoryType);
+            slotIsFull = false;
+            currentTag = AccessoryTags.None;
+            slotGameObject.transform.position = slotGameObject.GetComponent<DragItem>().itemOriginalPosition;
+            slotGameObject.GetComponent<DragItem>().isInventory = true;
+            itemIsDraggable = false;
+            CheckInventoryStatus();
+            slotGameObject = null;
+
+            //Replace new one
+            currentGameobject.SetActive(false);
+            slotIsFull = true;
+            slotGameObject = currentGameobject;
+            slotGameObject.GetComponent<Image>().raycastTarget = true;
+            SetSprite();
+            currentTag = currentlyDraggedItem.accessory.accessoryTag;
+            currentlyDraggedItem.isInventory = false;
+            currentGameobject = null;
+            currentlyDraggedItem = null;
+        }
         else
         {
             Debug.Log("Not Good");
