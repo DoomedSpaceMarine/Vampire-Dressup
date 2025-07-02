@@ -4,10 +4,10 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     //Arrays for all accessory types
-    [SerializeField] private DragItem[] head;
+    public DragItem[] head;
     [SerializeField] private DragItem[] torso;
-    [SerializeField] private DragItem[] legs;
-    [SerializeField] private DragItem[] feet;
+    public DragItem[] legs;
+    public DragItem[] feet;
 
     public int inventoryState; // 0 = Head, 1 = Torso, 2 = Legs, 3 = Feet
 

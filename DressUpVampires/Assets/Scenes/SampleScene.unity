@@ -999,7 +999,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17645a37ff771145891579b790dcb03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemOriginalPosition: {x: 0, y: 0}
+  itemOriginalPosition: {x: 90.064, y: 0}
   itemImage: {fileID: 160264611}
   accessory: {fileID: 11400000, guid: 4aa70bb2d77ea664db2adac34940a85f, type: 2}
   isInventory: 1
@@ -1418,7 +1418,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17645a37ff771145891579b790dcb03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemOriginalPosition: {x: 0, y: 0}
+  itemOriginalPosition: {x: 105.8544, y: 53.7291}
   itemImage: {fileID: 259976235}
   accessory: {fileID: 11400000, guid: ec3f7219ff8a5e34b8840d8f605794d4, type: 2}
   isInventory: 1
@@ -1667,7 +1667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17645a37ff771145891579b790dcb03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemOriginalPosition: {x: 0, y: 0}
+  itemOriginalPosition: {x: 103.8171, y: 93.6563}
   itemImage: {fileID: 296666682}
   accessory: {fileID: 11400000, guid: 74e607a13c2f649469389a9aa0588c45, type: 2}
   isInventory: 1
@@ -3118,7 +3118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17645a37ff771145891579b790dcb03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemOriginalPosition: {x: 0, y: 0}
+  itemOriginalPosition: {x: 105.1819, y: 94.8875}
   itemImage: {fileID: 587571181}
   accessory: {fileID: 11400000, guid: bbf2b197f665ef244aabf3652bbf8ade, type: 2}
   isInventory: 1
@@ -4329,8 +4329,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 558.4, y: 319.00003}
-  m_SizeDelta: {x: 120.6681, y: 85.0611}
+  m_AnchoredPosition: {x: 565.3, y: 313.26}
+  m_SizeDelta: {x: 148.2904, y: 75.269}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &890586319
 MonoBehaviour:
@@ -4382,7 +4382,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17645a37ff771145891579b790dcb03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemOriginalPosition: {x: 0, y: 0}
+  itemOriginalPosition: {x: 558.4, y: 319}
   itemImage: {fileID: 890586319}
   accessory: {fileID: 11400000, guid: f445e887fd08c0b4b90e50e6dbf0fc4e, type: 2}
   isInventory: 1
@@ -6795,7 +6795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17645a37ff771145891579b790dcb03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemOriginalPosition: {x: 0, y: 0}
+  itemOriginalPosition: {x: 558.4, y: 315.7}
   itemImage: {fileID: 1514492041}
   accessory: {fileID: 11400000, guid: a7430d4a4afaac34cabe7835a858cd16, type: 2}
   isInventory: 1
@@ -7432,7 +7432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17645a37ff771145891579b790dcb03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemOriginalPosition: {x: 0, y: 0}
+  itemOriginalPosition: {x: 728.5, y: 313.26}
   itemImage: {fileID: 1610907942}
   accessory: {fileID: 11400000, guid: 2b8a9d1f009feb04d8d1de11d65174ad, type: 2}
   isInventory: 1
@@ -8083,7 +8083,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a17645a37ff771145891579b790dcb03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemOriginalPosition: {x: 0, y: 0}
+  itemOriginalPosition: {x: 562, y: 319}
   itemImage: {fileID: 1824172308}
   accessory: {fileID: 11400000, guid: 205b5af0e6b37d54cac5d8fd7ca1ee9c, type: 2}
   isInventory: 1

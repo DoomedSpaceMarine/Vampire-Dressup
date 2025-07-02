@@ -53,7 +53,7 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
             SetSpriteEmpty(slotGameObject.GetComponent<DragItem>().accessory.accessoryType);
             slotIsFull = false;
             currentTag = AccessoryTags.None;
-            slotGameObject.transform.position = slotGameObject.GetComponent<DragItem>().itemOriginalPosition;
+            slotGameObject.transform.localPosition = slotGameObject.GetComponent<DragItem>().itemOriginalPosition;
             slotGameObject.GetComponent<DragItem>().isInventory = true;
             itemIsDraggable = false;
             CheckInventoryStatus();
@@ -100,7 +100,7 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
     {
         if (itemIsDraggable)
         {
-            slotGameObject.transform.position = slotGameObject.GetComponent<DragItem>().itemOriginalPosition;
+            slotGameObject.transform.localPosition = slotGameObject.GetComponent<DragItem>().itemOriginalPosition;
             slotGameObject.GetComponent<DragItem>().isInventory = true;
             itemIsDraggable = false;
             CheckInventoryStatus();
@@ -114,7 +114,7 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
         if (slotIsFull)
         {
             slotGameObject.SetActive(true);
-            slotGameObject.transform.position = slotGameObject.GetComponent<DragItem>().itemOriginalPosition;
+            slotGameObject.transform.localPosition = slotGameObject.GetComponent<DragItem>().itemOriginalPosition;
             slotGameObject.GetComponent<DragItem>().isInventory = true;
             SetSpriteEmpty(AccessoryTypes.Head);
             SetSpriteEmpty(AccessoryTypes.Torso);
@@ -123,7 +123,10 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
             inventory.ShowHeadAccessories();
             slotIsFull = false;
             currentTag = AccessoryTags.None;
+
         }
+
+        SetBare();
     }
 
     private void CheckInventoryStatus()
@@ -198,6 +201,58 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
                 feetImage.sprite = emptySprite;
                 break;
 
+        }
+    }
+
+    private void SetBare()
+    {
+
+        if (targetType == AccessoryTypes.Head)
+        {
+            //Head
+            currentGameobject = inventory.head[3].gameObject;
+            currentlyDraggedItem = currentGameobject.GetComponent<DragItem>();
+            currentGameobject.SetActive(false);
+            slotIsFull = true;
+            slotGameObject = currentGameobject;
+            slotGameObject.GetComponent<Image>().raycastTarget = true;
+            SetSprite();
+            currentTag = currentlyDraggedItem.accessory.accessoryTag;
+            currentlyDraggedItem.isInventory = false;
+            currentGameobject = null;
+            currentlyDraggedItem = null;
+        }
+
+        if (targetType == AccessoryTypes.Legs)
+        {
+            //Legs
+            currentGameobject = inventory.legs[2].gameObject;
+            currentlyDraggedItem = currentGameobject.GetComponent<DragItem>();
+            currentGameobject.SetActive(false);
+            slotIsFull = true;
+            slotGameObject = currentGameobject;
+            slotGameObject.GetComponent<Image>().raycastTarget = true;
+            SetSprite();
+            currentTag = currentlyDraggedItem.accessory.accessoryTag;
+            currentlyDraggedItem.isInventory = false;
+            currentGameobject = null;
+            currentlyDraggedItem = null;
+        }
+
+        if (targetType == AccessoryTypes.Feet)
+        {
+            //Feet
+            currentGameobject = inventory.feet[2].gameObject;
+            currentlyDraggedItem = currentGameobject.GetComponent<DragItem>();
+            currentGameobject.SetActive(false);
+            slotIsFull = true;
+            slotGameObject = currentGameobject;
+            slotGameObject.GetComponent<Image>().raycastTarget = true;
+            SetSprite();
+            currentTag = currentlyDraggedItem.accessory.accessoryTag;
+            currentlyDraggedItem.isInventory = false;
+            currentGameobject = null;
+            currentlyDraggedItem = null;
         }
     }
 

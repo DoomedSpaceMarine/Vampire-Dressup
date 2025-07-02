@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -12,10 +13,19 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public bool isInventory = true;
 
+    private bool hasPositionBeenSet;
+
+    private RectTransform transformRect;
+
+    private void Awake()
+    {
+        transformRect = GetComponent<RectTransform>();
+        itemOriginalPosition = transform.localPosition;
+    }
+
     private void Start()
     {
         isInventory = true;
-        itemOriginalPosition = transform.position;
     }
 
     public void OnBeginDrag(PointerEventData data)
@@ -30,7 +40,7 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     public void OnEndDrag(PointerEventData data)
     {
-        transform.position = itemOriginalPosition;
+        transform.localPosition = itemOriginalPosition;
         itemImage.raycastTarget = true;
     }
     }
