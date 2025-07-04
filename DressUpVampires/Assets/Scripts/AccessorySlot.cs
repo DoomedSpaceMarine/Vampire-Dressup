@@ -28,6 +28,13 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
 
     [SerializeField] private Sprite emptySprite;
 
+    private AudioManager audioManager;
+
+    private void Start()
+    {
+        audioManager = FindObjectOfType<AudioManager>();
+    }
+
     public void OnDrop(PointerEventData data)
     {
         currentGameobject = data.pointerDrag;
@@ -45,6 +52,7 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
             currentlyDraggedItem.isInventory = false;
             currentGameobject = null;
             currentlyDraggedItem = null;
+            audioManager.SFX_DressClothing();
         }
         else if (slotIsFull && currentGameobject.GetComponent<DragItem>().accessory.accessoryType == targetType)
         {
@@ -69,6 +77,7 @@ public class AccessorySlot : MonoBehaviour, IDropHandler, IBeginDragHandler, IDr
             currentlyDraggedItem.isInventory = false;
             currentGameobject = null;
             currentlyDraggedItem = null;
+            audioManager.SFX_DressClothing();
         }
         else
         {

@@ -17,6 +17,8 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
 
     private RectTransform transformRect;
 
+    private AudioManager audioManager;
+
     private void Awake()
     {
         transformRect = GetComponent<RectTransform>();
@@ -26,11 +28,13 @@ public class DragItem : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDrag
     private void Start()
     {
         isInventory = true;
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     public void OnBeginDrag(PointerEventData data)
     {
         itemImage.raycastTarget = false;
+        audioManager.SFX_SelectClothing();
     }
 
     public void OnDrag(PointerEventData data)
